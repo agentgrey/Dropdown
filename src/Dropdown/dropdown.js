@@ -15,18 +15,20 @@ function Dropdown() {
         "Of course, because dropdowns make everything better."
     ];
 
-
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState("-");
 
+/** ------------------ Function to toggle dropdown ------------------ **/
     const handleDropdownToggle = () => {
         setDropdownOpen(!isDropdownOpen);
     };
-
+/** ------------------ Function to select option ------------------ **/
     const handleOptionSelect = (option) => {
         setSelectedOption(option);
         setDropdownOpen(false);
     };
+
+
 
   return (
         <div className={Style.dropdown}>
@@ -56,5 +58,5 @@ function Dropdown() {
 
 
 
-/** ------------------ EXPORTING CSS ------------------ **/
+/** ------------------ EXPORTING MODULE ------------------ **/
 export default Dropdown
